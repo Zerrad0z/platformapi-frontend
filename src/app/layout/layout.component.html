@@ -1,0 +1,16 @@
+<mat-toolbar color="Dark">
+  <div class="left-nav">
+    <a mat-button routerLink="/">Accueil</a>
+    <a mat-button routerLink="/api-list">Liste des APIs</a>
+    <a mat-button routerLink="/support">Support</a>
+  </div>
+  <span class="spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">Profile</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/profile">Profile</button>
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+</mat-toolbar>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

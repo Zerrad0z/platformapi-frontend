@@ -1,0 +1,3 @@
+<h1>{{ api.name }}</h1>
+<p>{{ api.description }}</p>
+<p *ngIf="api.documentationUrl">Documentation: <a [href]="api.documentationUrl" target="_blank">{{ api.documentationUrl }}</a></p>
